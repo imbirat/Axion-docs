@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { docSections } from '../data/docs';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronDown } from 'lucide-react';
+import { X } from 'lucide-react';
 
 interface SidebarProps {
   activeId: string;
