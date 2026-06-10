@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import {
   Shield,
   TrendingUp,
@@ -24,6 +25,31 @@ const features = [
   { icon: Users, title: 'Role Management', description: 'Automate and organize server permissions.' },
   { icon: Clock, title: '24/7 Uptime', description: 'Reliable infrastructure with uninterrupted service.' },
 ];
+
+function TypingWord({ text }: { text: string }) {
+  const [displayed, setDisplayed] = useState('');
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      i++;
+      setDisplayed(text.slice(0, i));
+      if (i === text.length) {
+        clearInterval(interval);
+        setTimeout(() => setDone(true), 600);
+      }
+    }, 120);
+    return () => clearInterval(interval);
+  }, [text]);
+
+  return (
+    <span className="gradient-text inline-flex">
+      {displayed}
+      {!done && <span className="w-[2px] h-[0.8em] bg-purple-400 ml-0.5 animate-pulse" />}
+    </span>
+  );
+}
 
 export default function Home() {
   return (
@@ -52,11 +78,9 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-balance"
           >
-            Axion is the{' '}
-            <span className="gradient-text-1">Powerful</span>{' '}
-            Discord Bot Providing{' '}
-            <span className="gradient-text">Premium Features</span>{' '}
-            For Free.
+            Meet{' '}
+            <TypingWord text="Axion" />{' '}
+            bot
           </motion.h1>
 
           <motion.p
@@ -65,7 +89,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-[var(--text-secondary)] max-w-2xl mx-auto mb-10"
           >
-            All-in-one moderation, economy, leveling, music, tickets, and more. 100% free forever.
+            All-in-one bot with moderation, economy, leveling, music, tickets, and more. 100% free forever.
           </motion.p>
 
           <motion.div
