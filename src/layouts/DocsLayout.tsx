@@ -2,6 +2,7 @@ import { ReactNode, useState, useEffect, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { docSections } from '../data/docs';
 import Sidebar from '../components/Sidebar';
+import TableOfContents from '../components/TableOfContents';
 import SearchBar from '../components/SearchBar';
 import ThemeToggle from '../components/ThemeToggle';
 import { Menu, ChevronRight, Home } from 'lucide-react';
@@ -143,6 +144,8 @@ export default function DocsLayout({ children, onSearch, searchQuery }: DocsLayo
               </div>
             )}
           </main>
+
+          {!searchQuery && <TableOfContents activeId={activeId} />}
         </div>
       </div>
     </div>
