@@ -164,7 +164,7 @@ export default function Docs() {
           </p>
         </div>
       ) : searchQuery ? (
-        filteredSections.map((section, index) => (
+        (filteredSections as (typeof docSections[number] & { excerpt: string })[]).map((section, index) => (
           <motion.div
             key={section.id}
             initial={{ opacity: 0, y: 20 }}
@@ -182,7 +182,7 @@ export default function Docs() {
                 </h3>
               </div>
               <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
-                {section.excerpt.split('**').map((part, i) =>
+                {section.excerpt.split('**').map((part: string, i: number) =>
                   i % 2 === 1 ? (
                     <strong key={i} className="text-[var(--text-primary)]">
                       {part}

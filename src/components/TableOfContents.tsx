@@ -57,7 +57,7 @@ export default function TableOfContents({ activeId }: TableOfContentsProps) {
           const topmost = visible.reduce((a, b) =>
             a.boundingClientRect.top < b.boundingClientRect.top ? a : b
           );
-          setActiveHeading(topmost.id);
+          setActiveHeading((topmost.target as HTMLElement).id);
         }
       },
       { rootMargin: '-80px 0px -60% 0px' }
