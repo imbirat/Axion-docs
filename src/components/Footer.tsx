@@ -17,7 +17,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/imbirat/Axion-docs"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-xl text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:glass transition-all duration-200"
@@ -46,8 +46,41 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-[var(--border)] text-center">
-          <p className="text-sm text-[var(--text-muted)]">
+        <div className="mt-8 pt-8 border-t border-[var(--border)]">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm">
+            <Link
+              to="/privacy"
+              className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span className="hidden sm:inline text-[var(--text-muted)]">&bull;</span>
+            <Link
+              to="/terms"
+              className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+            >
+              Terms of Service
+            </Link>
+            <span className="hidden sm:inline text-[var(--text-muted)]">&bull;</span>
+            <a
+              href="https://discord.gg/axion"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+            >
+              Support Server
+            </a>
+            <span className="hidden sm:inline text-[var(--text-muted)]">&bull;</span>
+            <a
+              href="https://discord.com/oauth2/authorize?client_id=1502623528476737627&permissions=6282225540967030&integration_type=0&scope=bot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+            >
+              Invite Bot
+            </a>
+          </div>
+          <p className="mt-6 text-center text-sm text-[var(--text-muted)]">
             &copy; {new Date().getFullYear()} Axion. All rights reserved.
           </p>
         </div>

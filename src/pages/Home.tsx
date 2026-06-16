@@ -99,7 +99,7 @@ export default function Home() {
             className="flex items-center justify-center gap-4 flex-wrap"
           >
             <a
-              href="https://discord.com/oauth2/authorize?client_id=axion"
+              href="https://discord.com/oauth2/authorize?client_id=1502623528476737627&permissions=6282225540967030&integration_type=0&scope=bot"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 px-8 py-3.5 rounded-xl text-white font-semibold text-sm transition-all duration-200 hover:scale-105 glow"

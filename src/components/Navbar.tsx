@@ -29,7 +29,7 @@ export default function Navbar() {
 
             <div className="flex items-center gap-2 sm:gap-3">
               <a
-                href="https://github.com"
+                href="https://github.com/imbirat/Axion-docs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-xl glass hover:scale-105 transition-all duration-200"
@@ -39,7 +39,7 @@ export default function Navbar() {
               </a>
 
               <a
-                href="https://discord.com/oauth2/authorize?client_id=axion"
+                href="https://discord.com/oauth2/authorize?client_id=1502623528476737627&permissions=6282225540967030&integration_type=0&scope=bot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2 rounded-xl text-white font-medium text-sm transition-all duration-200 hover:scale-105 glow-sm"
