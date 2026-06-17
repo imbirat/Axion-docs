@@ -57,7 +57,7 @@ const sections = [
   {
     title: 'Contact',
     content:
-      'If you have any questions, concerns, or requests regarding these Terms of Service, please reach out to us through our official Discord support server at https://discord.gg/axion or contact us via email at support@axionbot.qzz.io.',
+      'If you have any questions, concerns, or requests regarding these Terms of Service, please reach out to us through our official Discord support server at https://discord.gg/5ZGTMY6GRj or contact us via email at support@axionbot.qzz.io.',
   },
 ];
 

@@ -27,7 +27,7 @@ export default function Footer() {
           </Link>
           <span className="select-none">&bull;</span>
           <a
-            href="https://discord.gg/axion"
+            href="https://discord.gg/5ZGTMY6GRj"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[var(--text-primary)] transition-colors"

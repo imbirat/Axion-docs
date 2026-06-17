@@ -35,7 +35,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href="https://github.com"
+            href="https://github.com/imbirat/Axion-docs"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex p-1.5 rounded-md transition-colors"

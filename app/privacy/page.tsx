@@ -89,7 +89,7 @@ const sections = [
       'If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, please contact us:',
     list: [
       'Email: support@axionbot.qzz.io',
-      'Discord Support Server: https://discord.gg/axion',
+      'Discord Support Server: https://discord.gg/5ZGTMY6GRj',
     ],
     afterList:
       'We will respond to your inquiry within 30 days.',

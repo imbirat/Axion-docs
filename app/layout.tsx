@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
+  icons: '/logo.png',
   title: 'Axion — Powerful Discord Bot',
   description:
     'All-in-one Discord bot with moderation, economy, leveling, music, tickets, and more. 100% free forever.',
