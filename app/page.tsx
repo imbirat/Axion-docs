@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import FeatureCard from '@/components/FeatureCard';
 import {
   Shield,
@@ -15,13 +13,7 @@ import {
   Sparkles,
   Plus,
   BookOpen,
-  ArrowRight,
 } from 'lucide-react';
-
-const TYPED_WORD = 'Axion';
-const TYPING_SPEED = 120;
-const CURSOR_BLINKS = 3;
-const CURSOR_BLINK_INTERVAL = 500;
 
 const features = [
   { icon: Shield, title: 'Advanced Moderation', description: 'Auto-ban, kick, mute, warn with full audit logs' },
@@ -35,32 +27,6 @@ const features = [
 ];
 
 export default function HomePage() {
-  const [typed, setTyped] = useState('');
-  const [done, setDone] = useState(false);
-  const [blinkCount, setBlinkCount] = useState(0);
-  const [showCursor, setShowCursor] = useState(true);
-
-  useEffect(() => {
-    if (typed.length < TYPED_WORD.length) {
-      const timer = setTimeout(() => {
-        setTyped(TYPED_WORD.slice(0, typed.length + 1));
-      }, TYPING_SPEED);
-      return () => clearTimeout(timer);
-    }
-    if (!done) {
-      setDone(true);
-      setShowCursor(true);
-      return;
-    }
-    if (blinkCount < CURSOR_BLINKS * 2) {
-      const timer = setTimeout(() => {
-        setShowCursor((prev) => !prev);
-        setBlinkCount((prev) => prev + 1);
-      }, CURSOR_BLINK_INTERVAL);
-      return () => clearTimeout(timer);
-    }
-    setShowCursor(false);
-  }, [typed, done, blinkCount]);
 
   return (
     <>
@@ -106,11 +72,7 @@ export default function HomePage() {
 
           {/* Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6" style={{ color: 'var(--text-primary)' }}>
-            Meet{' '}
-            <span className="gradient-text">
-              {typed}
-              {showCursor && <span className="inline-block w-[3px] h-[1em] ml-0.5 align-middle" style={{ backgroundColor: 'var(--accent)' }} />}
-            </span>
+            Meet <span className="gradient-text">Axion</span> bot
           </h1>
 
           {/* Subtitle */}
@@ -121,7 +83,7 @@ export default function HomePage() {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&integration_type=0&scope=bot"
+              href="https://discord.com/oauth2/authorize?client_id=1502623528476737627&permissions=6282225540967030&integration_type=0&scope=bot"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold transition-opacity hover:opacity-90"
