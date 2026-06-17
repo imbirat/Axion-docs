@@ -10,7 +10,7 @@ export default function Navbar() {
     <header
       className="fixed top-0 left-0 right-0 z-50 h-14"
       style={{
-        backgroundColor: 'rgba(13, 17, 23, 0.8)',
+        backgroundColor: 'var(--bg-primary)',
         borderBottom: '1px solid var(--border)',
         backdropFilter: 'blur(12px)',
         WebkitBackdropFilter: 'blur(12px)',
